@@ -1,15 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
   <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" /> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>VintageCollector</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+    <a id="top"></a>
+    <header>
+      <nav>
+        <ul>
+           <br><%= link_to "Home" %> &nbsp; 
+            <%= link_to "Sign in" %> &nbsp; 
+            <%= link_to "Sign up" %> &nbsp; 
+          <br><br>
     <%= yield %>
   </body>
 </html>
