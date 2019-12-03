@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 	#get '/collector' => 'collectors#index'
 
+	root 'welcome#index'
+
 	resources :users
 	
  
