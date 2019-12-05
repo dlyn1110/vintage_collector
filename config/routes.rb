@@ -4,6 +4,9 @@ Rails.application.routes.draw do
 	root 'welcome#index'
 
 	resources :users
+
+	get '/sigin' => 'sessions#new'
+	post '/sigin' => 'sessions#create'
 	
  
   # For details on the DSL available within this file, see https://guidesrubyonrails.org/routing.html
