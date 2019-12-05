@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 	root 'welcome#index'
 
 	resources :users
+	resources :sessions, only: [:new, :create, :destroy]
 
 	 get '/login' => 'sessions#new'
      post '/login' => 'sessions#create'
