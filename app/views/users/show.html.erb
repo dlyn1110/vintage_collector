@@ -1,0 +1,11 @@
+<h1><center><%= @user.name %>'s Homepage</h1>
+<div class='user_options'>
+
+	<h3></h3>
+	<h3></h3>
+
+<% if current_user %>
+    <p>&nbsp; <%= link_to 'Edit Profile', edit_user_path(@user) %><br><br>
+    &nbsp; <%= link_to "Delete Profile", [@user], method: :delete, data: { confirm: "Delete Profile?" } %></p>
+<% end %>
+<br><br>

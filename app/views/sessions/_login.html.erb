@@ -1,8 +1,8 @@
 
 <br><br>
 <div class="form-info"><center>
-    <%= form_for(:session) do |f| %>
-    <div>
+     <%= form_for login, method: "POST" do |f| %>
+     <div>
         <%= f.label 'Email' %>
         <%= f.text_field :email, :required => true %>
          </div>

@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
 	def index
+		@user = User.all
 	end
 
 	def new
@@ -19,6 +20,11 @@ class UsersController < ApplicationController
 
 
 	def show 
+		if logged_in?
+			find_user
+		else
+			redirect_to root_path
+		end
 	end
 
 
@@ -26,6 +32,10 @@ class UsersController < ApplicationController
 	
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
+    end
+
+    def find_user
+    	@user = User.find(params[:id])
     end
 
 end
