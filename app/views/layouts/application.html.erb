@@ -18,8 +18,9 @@
         <ul>
            <br><%= link_to "Home", root_path %> &nbsp; 
             <%= link_to "Sign In", '/login' %> &nbsp; 
-            <%= link_to "Sign Up", new_user_path %> &nbsp; 
-          <br><br>
+            <%= link_to "Sign Up", new_user_path %> &nbsp;
+            <%= link_to "Logout", logout_path %> &nbsp;
+            <br><br>
     <%= yield %>
   </body>
 </html>

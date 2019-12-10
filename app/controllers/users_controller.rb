@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
 	def index
-		@user = User.all
+		@users = User.all
 	end
 
 	def new
@@ -23,6 +23,13 @@ class UsersController < ApplicationController
 		if logged_in?
 			find_user
 		else
+			redirect_to root_path
+		end
+	end
+
+	def edit
+		find_user
+		if !current_user
 			redirect_to root_path
 		end
 	end

@@ -1,7 +1,7 @@
 
 <br><br>
 <div class="form-info"><center>
-     <%= form_for login, method: "POST" do |f| %>
+     <%= form_for(:session, url: login_path) do |f| %>
      <div>
         <%= f.label 'Email' %>
         <%= f.text_field :email, :required => true %>
