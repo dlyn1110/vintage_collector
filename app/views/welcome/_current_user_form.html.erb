@@ -1,0 +1,5 @@
+<% if logged_in? %>
+    <p><%= link_to 'Home Page', user_path(current_user) %></p>
+    <p><%= link_to 'Edit Profile', edit_user_path(current_user) %></p>
+    <p><%= link_to 'Delete Profile', current_user, method: :delete %></p>
+<% end %>
