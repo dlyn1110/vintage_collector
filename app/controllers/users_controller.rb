@@ -34,6 +34,17 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def update
+		find_user
+		if @user.update(user_params)
+			flash[:notice] = "Successfully updaed profile"
+			redirect_to user_path(@user)
+		else
+			flash[:notice] = @user.errors.full_messages
+			redirect_to '/login'
+		end
+	end
+
 
 	private
 	
