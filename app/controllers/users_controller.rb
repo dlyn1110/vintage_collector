@@ -45,6 +45,17 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def destroy
+	  if current_user
+	  	find_user.destroy
+	  	flash[:notice] = "Successfully deleted profile"
+	  	session.delete :user_id
+	  	redirect_to users_path
+	  else
+	  	redirect_to 'login'
+	  end
+	end
+
 
 	private
 	
