@@ -4,7 +4,7 @@
 	
 
 <% if current_user %>
-    <p>&nbsp; <%= link_to 'Edit Profile', edit_user_path(@user) %><br><br>
-    &nbsp; <%= link_to "Delete Profile", [@user], method: :delete, data: { confirm: "Delete Profile?" } %></p>
+    <p>&nbsp; <%= link_to 'Edit Profile', edit_user_path(@user), :class => 'btn btn-default' %>
+    &nbsp; <%= link_to "Delete Profile", user_path(@user), method: :delete, data: { confirm: "Are you sure?"}, :class => 'btn btn-default' %></p>
 <% end %>
 <br><br>

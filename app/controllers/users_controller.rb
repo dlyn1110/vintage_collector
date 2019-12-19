@@ -37,7 +37,7 @@ class UsersController < ApplicationController
 	def update
 		find_user
 		if @user.update(user_params)
-			flash[:notice] = "Successfully updaed profile"
+			flash[:notice] = "Successfully updated profile"
 			redirect_to user_path(@user)
 		else
 			flash[:notice] = @user.errors.full_messages
@@ -47,9 +47,11 @@ class UsersController < ApplicationController
 
 	def destroy
 	  if current_user
-	  	find_user.destroy
-	  	flash[:notice] = "Successfully deleted profile"
-	  	session.delete :user_id
+	  	#user.destroy
+	  	#flash[:notice] = "Successfully deleted profile"
+	  	@user = User.find(params[:id])
+	  	@user.destroy
+
 	  	redirect_to users_path
 	  else
 	  	redirect_to 'login'
