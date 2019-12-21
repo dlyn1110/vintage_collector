@@ -1,0 +1,22 @@
+<h1>Add To Your Collection</h1>
+
+<%= form_for :collection do |f| %>
+<p>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</p>
+
+<p>
+	<%= f.label :description %><br>
+    <%= f.text_field :description %>
+</p>
+
+<p>
+	<%= f.submit %>
+</p>
+<% end %>
+
+
+
+
+
