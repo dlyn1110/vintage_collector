@@ -1,33 +1,32 @@
-<h2><center>Update Profile</h2></center>
+<br>
+
+
+<h2>Update Profile</h2>
 
 <br><br>
-<div class="form-div"><center>
+
     <%= form_for(@user) do |f| %>
-    <div>
+    <p>
         <%= f.label 'Name', name: 'name', :required => true %>
         <%= f.text_field :name %>
-    </div><br>
+    </p>
 
-
-    <br>
-
-    <div>
+    <p>
         <%= f.label 'Email' %>
         <%= f.text_field :email, :required => true %>
-    </div><br>
-    <div>
+    </p>
+    <p>
         <%= f.label 'Password' %>
         <%= f.password_field :password, :required => true %>
-    </div>
-    <br>
+    </p>
+    
 
-    <div>
+    <p>
         <%= f.label 'Password Confirmation' %>
         <%= f.password_field :password_confirmation, :required => true %>
-    </div><br>
+    </p>
 
         <%= f.submit %>
-    <br><br>
+    </p>
 
     <% end %>
-</div></center>

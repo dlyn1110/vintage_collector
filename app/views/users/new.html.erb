@@ -1,34 +1,68 @@
-<h2><center>User Signup</h2></center><br><br>
 
+<br>
+<h2>User Signup</h2>
 
-<br><br>
-<div class="form-div"><center>
-    <%= form_for(@user) do |f| %>
-    <div>
-        <%= f.label 'Name', name: 'name', :required => true %>
-        <%= f.text_field :name %>
-    </div><br>
+   <%= form_for(@user) do |f| %>
+    <p>
+        
+    </p>
 
     
-    <br>
-
-    <div>
-        <%= f.label 'Email' %>
+    <p>
+        <%= f.label :name %><br>
         <%= f.text_field :email, :required => true %>
-    </div><br>
-    <div>
-        <%= f.label 'Password' %>
+    </p>
+    <p>
+        <%= f.label 'Password' %><br>
         <%= f.password_field :password, :required => true %>
-    </div>
-    <br>
+    </p>
+    
 
-    <div>
-        <%= f.label 'Password Confirmation' %>
+    <p>
+        <%= f.label 'Password Confirmation' %><br>
         <%= f.password_field :password_confirmation, :required => true %>
-    </div><br>
+    </p>
 
-        <%= f.submit %>
-    <br><br>
+    <p>
+       <%= f.submit %>
+    
+    </p>
+
 
     <% end %>
-</div></center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
