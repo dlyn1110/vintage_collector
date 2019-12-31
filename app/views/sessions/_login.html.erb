@@ -1,18 +1,25 @@
 
-<br><br>
-<div class="form-info"><center>
-     <%= form_for(:session, url: login_path) do |f| %>
-     <div>
-        <%= f.label 'Email' %>
-        <%= f.text_field :email, :required => true %>
-         </div>
+
+<h1>Login</h1>
+
+<%= form_for(:session, url: login_path) do |f| %>
     <br>
-    <div>
-        <%= f.label 'Password' %>
-        <%= f.password_field :password, :required => true %>
-    </div><br>
+
+      <%= f.label 'Email' %><br>
+      <%= f.text_field :email, :required => true %>
+    </p>
+     <p>
+
+      <%= f.label 'Password' %><br>
+      <%= f.password_field :password, :required => true %>
+      
+    </p>
+        
+    <p>
     <%= f.submit 'Log In' %>
-    <br><br>
+    </p>
 
 <% end %>
-</div></center>
+
+
+
