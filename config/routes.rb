@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
 	root 'welcome#index'
 
-	resources :users
-	resources :collections
+	resources :users do
+	  resources :collections
+	end
 	
 
 	 get '/login' => 'sessions#new'

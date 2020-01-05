@@ -9,7 +9,9 @@ class CollectionsController < ApplicationController
   	end
 
   	def create
-  		@collection = current_user.collections.build(collection_params)
+  		@user = User.find(params[:id]
+      @collection = @user.collections.create(collection_params)
+      redirect_to user_path(@user)
   		
   	end
 
@@ -19,7 +21,7 @@ class CollectionsController < ApplicationController
   	private
 
   	def collection_params
-  		params.require()
+  		params.require(:collection).permit(:item_name, :description)
   	end
 
 
