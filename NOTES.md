@@ -10,3 +10,10 @@ Collections should list all item_names with a link_to showing item_name, descrip
 
 
 add to collection should also show on users page with linkto which will get new collection form.
+
+add bootsrap
+
+
+todo for: 4/10
+
+Need to find where signin info is being stored via pry or irb becuae when going to login it is not bringing to users homepage

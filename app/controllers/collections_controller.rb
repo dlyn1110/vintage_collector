@@ -9,7 +9,7 @@ class CollectionsController < ApplicationController
   	end
 
   	def create
-  		@user = User.find(params[:id]
+  		@user = User.find(params[:id])
       @collection = @user.collections.create(collection_params)
       redirect_to user_path(@user)
   		
