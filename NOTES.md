@@ -16,4 +16,4 @@ add bootsrap
 
 todo for: 4/10
 
-Need to find where signin info is being stored via pry or irb becuae when going to login it is not bringing to users homepage
+Need to find where signin info is being stored via pry or irb because when going to login it is not bringing to users homepage
